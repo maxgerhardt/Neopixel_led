@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include <adafruit_neopixel.h>
+#include <Adafruit_NeoPixel.h>
 #include "neopixel_led.h"
 
 void setup() {

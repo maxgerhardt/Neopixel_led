@@ -1,5 +1,6 @@
 #ifndef LIB_NEOPIXEL_LED_SCALE_RGB_H_
 #define LIB_NEOPIXEL_LED_SCALE_RGB_H_
+#include <stdint.h>
 
 namespace neopixel_led {
   namespace scale_led {
@@ -13,7 +14,7 @@ namespace neopixel_led {
 
     inline void ScaleColorComponents(uint8_t& red, uint8_t& green, uint8_t& blue, uint8_t scale) {
       uint16_t scale_value = scale + 1;
-      
+
       red = (red * scale_value) >> 8;
       green = (green * scale_value) >> 8;
       blue = (blue * scale_value) >> 8;
@@ -21,7 +22,7 @@ namespace neopixel_led {
 
     inline uint8_t ScaleColorComponent(uint8_t color_component, uint8_t scale) {
       return (color_component * (1 + (uint16_t)(scale))) >> 8;
-    } 
+    }
 
     inline uint8_t ScaleColorComponentWithThreshold(uint8_t color_component, uint8_t scale) {
       uint8_t nonzero_scale = (scale != 0) ? 1 : 0;

@@ -1,6 +1,6 @@
 #ifndef LIB_NEOPIXEL_LED_MATH_LED_H_
 #define LIB_NEOPIXEL_LED_MATH_LED_H_
-
+#include <stdint.h>
 
 namespace neopixel_led {
   namespace math_led {
